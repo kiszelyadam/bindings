@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bindings';
+
+  isAllowed = true;
+  stringTitle = 'Angular is good';
+  ngModelValue = 'value';
+
+
+  eventBinding(): string {
+    return 'Angular is good';
+  }
+
+  showModelValue(): void {
+    console.log(this.ngModelValue);
+  }
+
+  catchChildComponentValue(event: any): void {
+    console.log(event);
+  }
 }
